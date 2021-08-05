@@ -1,0 +1,366 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 125%;
+}
+body{
+    font-family: 'Poppins', sans-serif;
+    color: white;
+}
+/* 
+/////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////main header page/////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////// */
+
+header{
+    width: 100%;
+    height: 100vh;
+    background-image:linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url('https://expertphotography.b-cdn.net/wp-content/uploads/2019/03/Chocolate-Cake-Darina-Kopcok-Expert-Phtography.jpg');
+    background-position: center;
+    background-size: cover;
+    /* position: relative; */
+}
+nav.main-nav{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 1.3rem;
+    background-color:rgba(46, 46, 46, 0.4);
+    position: sticky;
+    top: 0;
+}
+
+.nav-icons{
+    font-size: 1.3rem;
+    /* margin-right: 5%; */
+    position: absolute;
+    top: 35%;
+    right: 3%;
+    visibility: hidden;
+    cursor: pointer;
+}
+.nav-icons i.fa-bars{
+    position: absolute;
+    visibility: hidden;
+}
+
+.nav-items ul li{
+    list-style: none;
+}
+.nav-items ul li a{
+    text-decoration: none;
+    color: white;
+    margin-right: 1.2rem;
+    font-size: 1rem;
+    font-weight: 600;
+}
+.nav-items ul li a:hover{
+    color: rgb(165, 161, 161);
+}
+.nav-items ul{
+    display: flex;
+}
+
+.main--content{
+    width: auto;
+    font-size: 1.1rem;
+    position: absolute;
+    top: 50%;
+    left: 38%;
+    transform: translate(-50%,-50%);
+}
+.btn{
+    display: inline-block;
+    padding: 10px 30px;
+    font-size: 0.8rem;
+    font-weight: lighter;
+    text-decoration: none;
+    text-transform: uppercase;
+    border-radius: 200px;
+    border: 1px solid purple;
+    color: white;
+    transition: background-color 0.2s,border 0.2s,color 0.2s;
+    margin-top: 2%;
+    margin-right: 0.7%;
+}
+.btn-full1{
+    border:1px solid white;
+}
+.btn-full1:hover{
+    background-color: rgb(196, 4, 196);
+    border: 1px solid rgb(196, 4, 196);
+    /* background: #f44336; */
+    transition: 1s;
+}
+.btn-full2:hover{
+    background-color: white;
+    color: purple;
+    border: 1px solid white;
+    transition: 1s;
+}
+
+@media screen and (max-width:1180px){
+    html{
+        font-size: 100%;
+    }
+}
+@media screen and (max-width:998px){
+    html{
+        font-size: 90%;
+    }
+}
+@media screen and (max-width:718px){
+    .nav-items ul{
+        display: block;
+    }   
+    .nav-items{
+        width: 100%;
+        background-color: grey;
+        position: absolute;
+        top: -400%;
+        left: 0;
+        text-align: center;
+        z-index: 10;
+        transition: 1s;
+        line-height: 40px;
+    }
+    .nav-icons i.fa-times{
+        visibility: hidden;
+        transition-delay: 1s;
+    }
+    .nav-icons i.fa-bars{
+        visibility: visible;
+        transition-delay: 1s;
+    }
+
+    .main--content{
+        font-size: 0.8rem;
+    }
+    .btn{
+        margin-bottom: 10px;
+        font-size: 0.6rem;
+    }
+    
+}
+/* 
+///////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////ABOUT US ////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////// */
+
+.about-us{
+    width:100%;
+    background-color: rgb(180, 180, 171);
+    padding:8% 8% 5% 8%;
+}
+div.row-flex{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+div.row1{
+    width: 60%;
+    line-height: 1.7rem;
+    margin-right: 5%;
+}
+
+.about-us div.about-img{
+    width: 30%;
+    height: 20rem;
+}
+.about-us div.about-img img{
+    width: 100%;
+    height: 100%;
+}
+
+
+@media screen and (max-width:718px){
+    div.row1{
+        width: 100%;
+    }
+    .about-us div.about-img{
+        width: 60%;
+        height: 20rem;
+        margin-top: 5%;
+    }
+}
+
+/* 
+///////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////// WHAT WE PROVIDE ////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////// */
+
+.we-provide{
+    width: 100%;
+    background-color: rgb(241, 222, 110);
+    padding: 4% ;
+}
+.we-content{
+    font-size: 1rem;
+    text-align: center;
+    margin-bottom: 1%;
+}
+
+div.card{
+    width: 25%;
+    border-radius: 14px;
+    background-color: rgb(167, 160, 132);
+    padding: 1%;
+}
+.we-provide div.row-flex{
+    gap: 0%;
+}
+div.card:hover{
+    box-shadow:0 0 20px 0px rgba(0,0,0,0.2);
+
+}
+div.card-content{
+    text-align: center;
+}
+div.card-content img{
+    width: 100%;
+    border-radius: 10px;
+}
+div.card-content p{
+    font-size: 0.7rem;
+}
+@media screen and (max-width:718px){
+    .row-flex{
+        flex-direction: column;
+        align-items: center;
+    }
+    div.card{
+        width: 50%;
+        margin-bottom: 4%;
+        padding: 3%;
+    }
+    div.card-content img{
+        height: 15rem;
+    }
+}
+
+/* 
+///////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////// FOOTER////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////// */
+
+footer{
+    width: 100%;
+    background-color: rgb(37, 37, 37);
+    padding: 5% 5% 2% 5%;
+}
+footer div.col-body{
+    width: 40%;
+    height: 15rem;
+    font-style: italic;
+    font-size: 0.5rem;
+    line-height: 2rem;
+}
+footer div.col-body iframe{
+    width: 100%;
+    height: 100%;
+}
+footer .footer-nav{
+    width: 100%;
+    text-align: center;
+    margin-top: 2%;
+    line-height: 1.8rem;
+    font-size: 0.7rem;
+}
+footer .icons{
+    word-spacing: 0.7rem;
+    cursor: pointer;
+}
+@media screen and (max-width:718px){
+    footer div.row-flex{
+        flex-direction: row;
+    }
+    footer .footer-nav{
+        font-size: 0.7rem;
+    }
+}
+
+/* 
+///////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////// CONTACT US////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////// */
+
+section.contact-us{
+    width: 100%;
+    background-color: rgba(24, 18, 23, 0.541);
+    padding: 6%;
+}
+
+.contactUs-heading{
+    font-size: 1rem;
+    line-height: 1.5rem;
+    text-align: center;
+}
+.contact-form{
+    width: 100%;
+    /* display: flex; */
+    justify-content: center;
+    align-items: center;
+    margin-top: 5%;
+    gap: 5%;
+    /* border: 1px solid red; */
+}
+.contactus-loc{
+    width: 60%;
+    height: 500px;
+    /* border: 1px solid rgb(228, 197, 26); */
+}
+.contactus-loc iframe{
+    width: 100%;
+    height: 100%;
+}
+
+.contact-form input,.contact-form textarea{
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 17px;
+    outline: none;
+    border: 1px solid #ccc;
+}
+.hero-btn
+{
+    display:block;
+    text-decoration: none;
+    color: #fff;
+    border: 1px solid #fff;
+    padding: 10px 13px;
+    background: transparent;
+    font-size: 13px;
+    position: relative;
+    cursor: pointer;
+}
+.hero-btn:hover{
+    border: 1px solid #f44336;
+    background: #f44336;
+    transition: 1s;
+}
+div.contact-form{
+    width: 100%;
+    height: 100%;
+}
+div.contact-form div.contact-loc{
+    width: 100%;
+    padding: 5%;
+}
+div.contact-form div.contact-loc iframe{
+    width: 100%;
+    height: 100%;
+}
+div.contact-form div.form{
+    width: 50%;
+}
+
+@media screen and (max-width:718px){
+    .contactus-loc{
+        margin-bottom: 7%;
+        height: 200px;
+    }
+}
