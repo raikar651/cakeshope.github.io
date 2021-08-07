@@ -22,6 +22,7 @@ header{
     background-image:linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url('https://expertphotography.b-cdn.net/wp-content/uploads/2019/03/Chocolate-Cake-Darina-Kopcok-Expert-Phtography.jpg');
     background-position: center;
     background-size: cover;
+    background-attachment: fixed;
     /* position: relative; */
 }
 nav.main-nav{
